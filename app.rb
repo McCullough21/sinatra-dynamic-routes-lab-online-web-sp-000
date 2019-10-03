@@ -17,6 +17,7 @@ class App < Sinatra::Base
     @phrase = params[:phrase]
     @response = @number.times {"#{@phrase}"}
     "#{@response.}".join
+    binding.pry
   end
 
 
