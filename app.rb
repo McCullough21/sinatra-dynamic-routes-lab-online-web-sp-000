@@ -12,5 +12,5 @@ class App < Sinatra::Base
   "#{@num}"
   end
 
- 
+
 end
