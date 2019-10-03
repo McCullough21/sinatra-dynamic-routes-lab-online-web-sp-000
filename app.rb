@@ -22,12 +22,12 @@ class App < Sinatra::Base
     "#{params[:word1]} #{params[:word2]} #{params[:word3]} #{params[:word4]} #{params[:word5]}."
   end
 
-  get '/:operation/:number1/:number2' do
+  get "/:operation/:number1/:number2" do
+    @number1 = params[:number1]
+    @number2 = params[:number2]
     @operation = params[:operation]
-     @num1 = params[:number1]
-     @num2 = params[:number2]
-      @num1.send(@operation, @num2)
-      
+
+    @number1.send(@operation,@number2)
   end
 
 end
